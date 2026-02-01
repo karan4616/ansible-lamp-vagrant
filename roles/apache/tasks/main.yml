@@ -1,0 +1,20 @@
+---
+# roles/apache/tasks/main.yml
+
+- name: Update apt cache
+  apt: 
+    update_cache: yes
+    cache_valid_time: 3600 # Only update if cache is older than 1 hour
+
+- name: Install Apache
+  apt:
+    name: 
+      - apache2
+      - apache2-utils
+    state: present
+
+- name: Ensure Apache is running and enabled
+  service: 
+    name: apache2
+    state: started
+    enabled: yes

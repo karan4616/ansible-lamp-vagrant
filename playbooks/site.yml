@@ -1,0 +1,18 @@
+---
+
+- name: Configure Web Servers
+  hosts: web
+  become: yes
+  vars_files:
+    - ../group_vars/db/main.yml
+  roles:
+    - apache
+    - php
+
+- name: Configure Database Server
+  hosts: db
+  become: yes
+  vars_files:
+    - ../group_vars/db/main.yml
+  roles:
+    - mysql
