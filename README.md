@@ -29,25 +29,6 @@ Client → Apache (web1) → MySQL (db1)
 
 ---
 
-## 📂 Project Structure
-
-ansible-lamp-vagrant/
-├── inventory/
-│   └── hosts.ini
-├── group_vars/
-│   └── db/
-│       └── main.yml
-├── playbooks/
-│   └── site.yml
-├── roles/
-│   ├── apache/
-│   ├── mysql/
-│   └── php/
-├── ansible.cfg
-└── README.md
-
----
-
 ## ⚙️ How to Run
 
 ### 1️⃣ Start the VMs
